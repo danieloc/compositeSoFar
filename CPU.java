@@ -1,0 +1,36 @@
+
+
+public class CPU extends Component {
+    private String series;
+    private String CPUSocketType;
+
+    public CPU(int componentId, String componentName, int stock, String series, String CPUSocketType) {
+        super(componentId, componentName ,stock);
+        this.series = series;
+        this.CPUSocketType = CPUSocketType;
+    }
+
+    public String getSeries() {
+        return series;
+    }
+
+    public void setSeries(String series) {
+        this.series = series;
+    }
+
+    public String getCPUSocketType() {
+        return CPUSocketType;
+    }
+
+    public void setCPUSocketType(String CPUSocketType) {
+        this.CPUSocketType = CPUSocketType;
+    }
+    
+    public String getSpecs() {
+    	return "Series: " + series + " Socket Type: " + CPUSocketType;
+    }
+    
+    public String toString(){
+    	 return super.toString() + "," + this.series + "," + this.CPUSocketType;
+    }
+}
