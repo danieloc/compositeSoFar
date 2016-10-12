@@ -26,10 +26,6 @@ public class CPU extends Component {
         this.CPUSocketType = CPUSocketType;
     }
     
-    public String getSpecs() {
-    	return "Series: " + series + " Socket Type: " + CPUSocketType;
-    }
-    
     public String getComponentDetails(){
     	 return super.getComponentDetails() + "\nCPU series: " + this.series + "\nCPU SocketType" + this.CPUSocketType;
     }
