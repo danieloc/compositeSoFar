@@ -1,10 +1,5 @@
 
-import java.io.IOException;
-import java.text.DecimalFormat;
-import java.util.ArrayList;
-
-
-public class Component {
+public class Component implements Part {
 
     private int componentId;
     private String componentName;
@@ -23,12 +18,6 @@ public class Component {
         this.componentName = componentName;
         this.stock = stock;
     }
-    
-    /**
-     * Get the ID of this Component.
-     *
-     * @return the ID of this Component.
-     */
     public int getComponentId() {
         return componentId;
     }
@@ -36,37 +25,23 @@ public class Component {
         componentId =  newComponentId;
     }
 
-    /**
-     * Get the componentName of this Component.
-     *
-     * @return the componentName of this Component.
-     */
     public String getComponentName() {
         return componentName;
     }
+
     public void setComponentName(String newComponentName) {
         componentName =  newComponentName;
     }
     
-    /**
-     * Get the stock of this Component.
-     *
-     * @return the stock of this Component.
-     */
+
     public int getStock() {
         return stock;
     }
+
     public void setStock(int newStock) {
         stock =  newStock;
     }
 
-    /**
-     * Get a String that describes this Component. Note that
-     * this method overrides the toString method inherited
-     * from Object.
-     *
-     * @return a String describing this Component.
-     */
     public String getComponentDetails() {
         return "\nComponent ID: " + this.componentId + "\nComponent Name: " + this.componentName + "\nStock: " + this.stock + "\n";
     }

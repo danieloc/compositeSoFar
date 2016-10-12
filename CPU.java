@@ -30,7 +30,7 @@ public class CPU extends Component {
     	return "Series: " + series + " Socket Type: " + CPUSocketType;
     }
     
-    public String toString(){
-    	 return super.toString() + "," + this.series + "," + this.CPUSocketType;
+    public String getComponentDetails(){
+    	 return super.getComponentDetails() + "\nCPU series: " + this.series + "\nCPU SocketType" + this.CPUSocketType;
     }
 }

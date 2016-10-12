@@ -12,10 +12,6 @@ public class Monitor extends Component {
         this.is3d = is3d;
     }
 
-    public String toString() {
-    	return super.toString() + "," + this.screenResolution + "," + this.curved + "," + this.is3d;
-    }
-
     public String getScreenResolution() {
         return screenResolution;
     }
@@ -40,7 +36,7 @@ public class Monitor extends Component {
         this.is3d = is3d;
     }
     
-    public String getSpecs() {
-    	return "Resolution: " + screenResolution + " Curved: " + curved + " 3D: "  + is3d;
-    }
+    public String getComponentDetails(){
+   	 return super.getComponentDetails() + "\nScreenResolution: " + this.screenResolution + "\nCurved T/F: " + this.curved + "\nIs 3D T/F: " + this.is3d;
+   }
 }

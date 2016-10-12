@@ -37,11 +37,7 @@ public class Motherboard extends Component {
         this.memoryStandard = memoryStandard;
     }
     
-    public String getSpecs() {
-    	return "CPU Socket Type: " + cpuSocketType + " Series: " + series  + " Memory Standard: " + memoryStandard;
-    }
-    
-    public String toString() {
-    	 return super.toString() + "," + this.cpuSocketType + "," + this.series + "," + this.memoryStandard;
-    }
+    public String getComponentDetails(){
+   	 return super.getComponentDetails() + "\nCPU Socket Type: " + this.cpuSocketType + "\nSeries" + this.series + "\nMemoryStandard: " + this.memoryStandard;
+   }
 }

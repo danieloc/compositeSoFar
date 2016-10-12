@@ -9,10 +9,6 @@ public class Keyboard extends Component {
         this.backlit = backlit;
     }
 
-    public String toString() {
-    	return super.toString() + "," + this.keySwitchType + "," + this.backlit;
-    }
-
     public String getKeySwitchType() {
         return keySwitchType;
     }
@@ -29,7 +25,7 @@ public class Keyboard extends Component {
         this.backlit = backlit;
     }
     
-    public String getSpecs() {
-    	return "Key Switch Type: " + keySwitchType + " Backlit: " + backlit;
-    }
+    public String getComponentDetails(){
+   	 return super.getComponentDetails() + "\nKeySwitchType: " + this.keySwitchType + "\nBacklit: " + this.backlit;
+   }
 }

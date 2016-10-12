@@ -22,16 +22,12 @@ public class ComputerSystem extends Component{
 
     }
 
-    public void removeComponent(Component component) {
+    public void removeComponent(Part component) {
     	components.remove(component);
     }
     
-    public Component getChildAtIndex(int i) {
+    public Part getChildAtIndex(int i) {
         return components.get(i);
-    }
-    
-    public String toString(){
-    	 return super.toString() + "," + OS;
     }
 
     public String getOS() {
@@ -48,5 +44,9 @@ public class ComputerSystem extends Component{
 
     public double getUnitCost() {
         return unitCost;
+    }
+    
+    public String getComponentDetails(){
+    	return super.getComponentDetails() + "\nOperating System: " + this.OS;
     }
  }

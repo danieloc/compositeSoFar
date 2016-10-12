@@ -1,10 +1,9 @@
 
 
 public class RAM extends Component {
-
-    private String type;
-    private String multiChannel;
+	
     private int gigaBytes;
+    private String multiChannel;
 
     public RAM(int componentId, String componentName, int stock, int gigaBytes, String multiChannel) {
         super(componentId, componentName ,stock);
@@ -16,8 +15,8 @@ public class RAM extends Component {
         return gigaBytes;
     }
 
-    public void setGigaBytes(String type) {
-        this.type = type;
+    public void setGigaBytes(int gigaBytes) {
+        this.gigaBytes = gigaBytes;
     }
 
     public String getMultiChannel() {
@@ -28,11 +27,7 @@ public class RAM extends Component {
         this.multiChannel = multiChannel;
     }
     
-    public String getSpecs() {
-    	return "gigaBytes: : " + gigaBytes + " Multi Channel: " + multiChannel;
-    }
-    
-    public String toString() {
-    	 return super.toString() + "," + this.gigaBytes + "," + this.multiChannel;
-    }
+    public String getComponentDetails(){
+   	 return super.getComponentDetails() + "\nGigaBytes: " + this.gigaBytes + "\nMultiChannel" + this.multiChannel;
+   }
 }

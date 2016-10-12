@@ -11,10 +11,6 @@ public class Mouse extends Component {
         this.dpiSwitching = dpiSwitching;
     }
 
-    public String toString() {
-    	return super.toString() + "," + this.dpi + "," + this.programmableButtons + "," + this.dpiSwitching;
-    }
-
     public int getDpi() {
         return dpi;
     }
@@ -39,7 +35,7 @@ public class Mouse extends Component {
         this.dpiSwitching = dpiSwitching;
     }
     
-    public String getSpecs() {
-    	return "DPI: " + dpi + " Programmable: " + programmableButtons + " DPI Switching: "  + dpiSwitching;
-    }
+    public String getComponentDetails(){
+   	 return super.getComponentDetails() + "\nMouse DPI: " + this.dpi + "\nProgrammable Buttons: " + this.programmableButtons + "DPI Switching : " + this.dpiSwitching;
+   }
 }

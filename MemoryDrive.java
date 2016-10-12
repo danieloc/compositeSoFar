@@ -29,7 +29,7 @@ public class MemoryDrive extends Component {
     	 return super.toString() + "," + this.driveCapacity + "," + this.SSD;
     }
     
-    public String getSpecs() {
-    	return  " Capacity: " + driveCapacity + " SSD: "  + SSD;
-    }
+    public String getComponentDetails(){
+   	 return super.getComponentDetails() + "\nDriveCapacity: " + this.driveCapacity + "\nSSD T/F : " + this.SSD;
+   }
 }

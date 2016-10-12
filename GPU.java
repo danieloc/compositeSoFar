@@ -26,12 +26,8 @@ public class GPU extends Component {
     public void setDisplayPorts(int displayPorts) {
         this.displayPorts = displayPorts;
     }
-
-    public String toString(){
-    	 return super.toString() + "," + this.memory +","  + this.displayPorts;
-    }
     
-    public String getSpecs() {
-    	return "Memory: " + memory + " Display Ports: "  + displayPorts;
-    }
+    public String getComponentDetails(){
+   	 return super.getComponentDetails() + "\nGPU Memory: " + this.memory + "\nGPU DisplayPorts" + this.displayPorts;
+   }
 }

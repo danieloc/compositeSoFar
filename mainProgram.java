@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class mainProgram {
 	public static void main(String args []) {
 		ComputerSystem alienwareGamingPC = new ComputerSystem(13141252, "AlienWare Laptop", 6, 1200.66, "Windows");
@@ -10,12 +8,15 @@ public class mainProgram {
 		Motherboard leafMotherboard = new Motherboard(13141257, "ROF266", 6, "12PinSocketType", "Series 12", "3333Mhrz");
 		RAM leafRam = new RAM(13141258, "RipTide" , 7, 16, "Dual");
 		Mouse leafMouse = new Mouse(13141259, "Razor Deathador", 8, 900, true, true);
+		Monitor leafMonitor = new Monitor(13141260, "Samsung 22\" v1.1.1"  , 8, "1200 x 600", false, false);
 		alienwareGamingPC.addComponent(leafCPU);
 		alienwareGamingPC.addComponent(leafGPU);
 		alienwareGamingPC.addComponent(leafKeyBoard);
 		alienwareGamingPC.addComponent(leafMemoryDrive);
 		alienwareGamingPC.addComponent(leafMotherboard);
 		alienwareGamingPC.addComponent(leafMouse);
+		alienwareGamingPC.addComponent(leafRam);
+		alienwareGamingPC.addComponent(leafMonitor);
 		alienwareGamingPC.removeComponent(alienwareGamingPC.getChildAtIndex(3));
 
 		int amountOfComps =  alienwareGamingPC.getComponents().size();
@@ -25,9 +26,19 @@ public class mainProgram {
 		}
 
 
-		String series = alienwareGamingPC.getChildAtIndex(0).getSeries();
-		System.out.println(series);
+		CPU cpuPart = (CPU) alienwareGamingPC.getChildAtIndex(0);
+		System.out.println(cpuPart.getComponentDetails());
+		
+		GPU gpuPart = (GPU) alienwareGamingPC.getChildAtIndex(1);
+		System.out.println(gpuPart.getComponentDetails());
+		
+		Keyboard keyboardPart = (Keyboard) alienwareGamingPC.getChildAtIndex(2);
+		System.out.println(keyboardPart.getComponentDetails());
+		String keySwitch = keyboardPart.getKeySwitchType();
+		System.out.println(keySwitch);
+		
 
-
+		
+		
 	}
 }
